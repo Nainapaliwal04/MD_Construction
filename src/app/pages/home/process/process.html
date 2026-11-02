@@ -1,0 +1,60 @@
+
+<section class="process section-padding" id="process">
+  <div class="container">
+
+    <div class="process__heading">
+      <span class="process__eyebrow">
+        <span class="process__eyebrow-line"></span>
+        HOW WE WORK
+      </span>
+
+      <h2 class="process__title">
+        A Clear Process.
+        <span>A Shared Vision.</span>
+      </h2>
+
+      <p class="process__intro">
+        Every project is different. Our structured approach helps establish
+        clarity, support coordination, and keep project objectives in focus.
+      </p>
+    </div>
+
+    <div class="process__timeline">
+      <div class="process__track" aria-hidden="true"></div>
+
+      @for (step of steps; track step.number) {
+        <article class="process-step">
+          <div class="process-step__marker">
+            <span>{{ step.number }}</span>
+          </div>
+
+          <div class="process-step__content">
+            <span class="process-step__label">
+              STEP {{ step.number }}
+            </span>
+
+            <h3>{{ step.title }}</h3>
+
+            <p>{{ step.description }}</p>
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="process__cta">
+      <div class="process__cta-content">
+        <span class="process__cta-eyebrow">LET'S GET STARTED</span>
+        <h3>Your project begins with a conversation.</h3>
+        <p>
+          Tell us about your requirements and let's discuss the next steps.
+        </p>
+      </div>
+
+      <a routerLink="/contact" class="process__cta-button">
+        Discuss Your Project
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>

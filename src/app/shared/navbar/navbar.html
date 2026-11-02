@@ -1,0 +1,213 @@
+<header class="site-header">
+
+  <!-- =========================
+       TOP BAR
+       ========================= -->
+  <div class="top-bar">
+
+    <div class="container top-bar__inner">
+
+      <div class="top-bar__contact">
+
+        <a
+          href="tel:+919999999999"
+          class="top-bar__item"
+          aria-label="Call MD Constructions"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2
+              19.79 19.79 0 0 1-8.63-3.07
+              19.5 19.5 0 0 1-6-6
+              A19.79 19.79 0 0 1 2.12 4.18
+              2 2 0 0 1 4.11 2h3
+              a2 2 0 0 1 2 1.72
+              12.84 12.84 0 0 0 .7 2.81
+              2 2 0 0 1-.45 2.11L8.09 9.91
+              a16 16 0 0 0 6 6l1.27-1.27
+              a2 2 0 0 1 2.11-.45
+              12.84 12.84 0 0 0 2.81.7
+              A2 2 0 0 1 22 16.92z"
+            />
+          </svg>
+
+          <span>+91 99999 99999</span>
+        </a>
+
+
+        <a
+          href="mailto:info@mdconstructions.in"
+          class="top-bar__item"
+          aria-label="Email MD Constructions"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12
+              c0 1.1-.9 2-2 2H4
+              c-1.1 0-2-.9-2-2V6
+              c0-1.1.9-2 2-2z"
+            />
+
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+
+          <span>info@mdconstructions.in</span>
+        </a>
+
+      </div>
+
+
+      <div class="top-bar__social">
+
+        <span>Follow us</span>
+
+        <a href="#" aria-label="Instagram">
+          IG
+        </a>
+
+        <a href="#" aria-label="Facebook">
+          FB
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+          IN
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       MAIN NAVIGATION
+       ========================= -->
+  <nav
+    class="navbar"
+    aria-label="Main navigation"
+  >
+
+    <div class="container navbar__inner">
+
+      <!-- LOGO -->
+      <a
+        routerLink="/"
+        class="brand"
+        (click)="closeMenu()"
+        aria-label="MD Constructions Home"
+      >
+
+        <span class="brand__mark">
+          MD
+        </span>
+
+        <span class="brand__text">
+
+          <strong>
+            MD
+          </strong>
+
+          <span>
+            CONSTRUCTIONS
+          </span>
+
+        </span>
+
+      </a>
+
+
+      <!-- DESKTOP NAVIGATION -->
+      <div
+        class="navbar__links"
+        [class.navbar__links--open]="isMenuOpen"
+      >
+
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+        >
+          Home
+        </a>
+
+        <a
+          routerLink="/about"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          About
+        </a>
+
+        <a
+          routerLink="/services"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          Services
+        </a>
+
+        <a
+          routerLink="/projects"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          Projects
+        </a>
+
+        <a
+          routerLink="/pmc"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          PMC
+        </a>
+
+        <a
+          routerLink="/contact"
+          routerLinkActive="active"
+          (click)="closeMenu()"
+        >
+          Contact
+        </a>
+
+
+        <a
+          routerLink="/contact"
+          class="btn btn--primary navbar__cta"
+          (click)="closeMenu()"
+        >
+          Get a Quote
+        </a>
+
+      </div>
+
+
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        type="button"
+        class="menu-toggle"
+        [class.menu-toggle--active]="isMenuOpen"
+        [attr.aria-expanded]="isMenuOpen"
+        aria-label="Toggle navigation menu"
+        (click)="toggleMenu()"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+</header>

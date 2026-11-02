@@ -1,0 +1,25 @@
+
+<section class="stats-section section-padding">
+  <div class="container">
+
+    <div class="stats-heading">
+      <span class="section-label">MD CONSTRUCTIONS</span>
+      <h2>Built on Principles That <span>Matter.</span></h2>
+      <p>
+        Our approach combines organized planning, quality-focused work,
+        and clear communication to support every project.
+      </p>
+    </div>
+
+    <div class="stats-grid">
+      @for (item of highlights; track item.number) {
+        <article class="stat-card">
+          <span class="stat-number">{{ item.number }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      }
+    </div>
+
+  </div>
+</section>
